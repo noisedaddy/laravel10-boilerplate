@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1fc5983191a2baa9bdf5fec027465161",
+    "content-hash": "6795520cf89fbe4a8aa8b1420b2e0d3b",
     "packages": [
         {
             "name": "brick/math",
@@ -971,62 +971,6 @@
             "time": "2023-08-27T10:19:19+00:00"
         },
         {
-            "name": "huddledigital/zendesk-laravel",
-            "version": "v3.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/huddledigital/zendesk-laravel.git",
-                "reference": "74fa38b3e24cebb4731c5218c5091bb53975e62f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/huddledigital/zendesk-laravel/zipball/74fa38b3e24cebb4731c5218c5091bb53975e62f",
-                "reference": "74fa38b3e24cebb4731c5218c5091bb53975e62f",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.4|^6.0|^7.0|^8.0|^9.0|^10.0",
-                "php": ">=5.4.0",
-                "zendesk/zendesk_api_client_php": "2.*"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Huddle\\Zendesk\\Providers\\ZendeskServiceProvider"
-                    ],
-                    "aliases": {
-                        "Zendesk": "Huddle\\Zendesk\\Facades\\Zendesk"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Huddle\\Zendesk\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Huddle Digital Ltd",
-                    "email": "info@workwithhuddle.com"
-                }
-            ],
-            "description": "Laravel wrapper for zendesk/zendesk_api_client_php package",
-            "homepage": "http://workwithhuddle.com",
-            "keywords": [
-                "Zendesk"
-            ],
-            "support": {
-                "issues": "https://github.com/huddledigital/zendesk-laravel/issues",
-                "source": "https://github.com/huddledigital/zendesk-laravel/tree/v3.8"
-            },
-            "time": "2023-05-26T08:10:28+00:00"
-        },
-        {
             "name": "laravel/breeze",
             "version": "v1.23.3",
             "source": {
@@ -1461,6 +1405,77 @@
                 "source": "https://github.com/laravel/serializable-closure"
             },
             "time": "2023-07-14T13:56:28+00:00"
+        },
+        {
+            "name": "laravel/telescope",
+            "version": "v4.16.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/telescope.git",
+                "reference": "5cb73363ef6d57e4087ccc380964c5120d34ec3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/5cb73363ef6d57e4087ccc380964c5120d34ec3c",
+                "reference": "5cb73363ef6d57e4087ccc380964c5120d34ec3c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/framework": "^8.37|^9.0|^10.0",
+                "php": "^8.0",
+                "symfony/var-dumper": "^5.0|^6.0"
+            },
+            "require-dev": {
+                "ext-gd": "*",
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "laravel/octane": "^1.4",
+                "orchestra/testbench": "^6.0|^7.0|^8.0",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Telescope\\TelescopeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Telescope\\": "src/",
+                    "Laravel\\Telescope\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Mohamed Said",
+                    "email": "mohamed@laravel.com"
+                }
+            ],
+            "description": "An elegant debug assistant for the Laravel framework.",
+            "keywords": [
+                "debugging",
+                "laravel",
+                "monitoring"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/telescope/issues",
+                "source": "https://github.com/laravel/telescope/tree/v4.16.4"
+            },
+            "time": "2023-09-25T13:48:25+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1924,60 +1939,6 @@
                 }
             ],
             "time": "2023-08-05T12:09:49+00:00"
-        },
-        {
-            "name": "mmucklo/inflect",
-            "version": "v0.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mmucklo/inflect.git",
-                "reference": "b665bcd3d4c23b6aa1990b6405ff96dd437689e9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mmucklo/inflect/zipball/b665bcd3d4c23b6aa1990b6405ff96dd437689e9",
-                "reference": "b665bcd3d4c23b6aa1990b6405ff96dd437689e9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.17"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Inflect": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sho Kuwamoto",
-                    "email": "sho@kuwamoto.org"
-                },
-                {
-                    "name": "Matthew J. Mucklo",
-                    "email": "mmucklo@gmail.com"
-                }
-            ],
-            "description": "inflect - a memoizing inflector for php",
-            "keywords": [
-                "inflect",
-                "inflector",
-                "pluralize",
-                "singularize",
-                "urlify"
-            ],
-            "support": {
-                "issues": "https://github.com/mmucklo/inflect/issues",
-                "source": "https://github.com/mmucklo/inflect/tree/v0.3.0"
-            },
-            "time": "2015-05-16T04:16:08+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5787,53 +5748,6 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
-        },
-        {
-            "name": "zendesk/zendesk_api_client_php",
-            "version": "v2.2.17",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendesk/zendesk_api_client_php.git",
-                "reference": "453c9777a0677b57f018c42d13c9c3cce043bf0f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendesk/zendesk_api_client_php/zipball/453c9777a0677b57f018c42d13c9c3cce043bf0f",
-                "reference": "453c9777a0677b57f018c42d13c9c3cce043bf0f",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.0 || ^7.0",
-                "guzzlehttp/psr7": "^1.7 || ^2.0",
-                "mmucklo/inflect": "0.3.*",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "fzaninotto/faker": ">=1.5.0",
-                "phpmd/phpmd": "@stable",
-                "phpunit/phpunit": "4.5.*",
-                "psy/psysh": "@stable",
-                "squizlabs/php_codesniffer": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Zendesk\\API\\": "src/",
-                    "Zendesk\\Console\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "PHP Client for Zendesk REST API. See https://developer.zendesk.com/rest_api/docs/core/introduction .",
-            "homepage": "https://github.com/zendesk/zendesk_api_client_php",
-            "support": {
-                "issues": "https://github.com/zendesk/zendesk_api_client_php/issues",
-                "source": "https://github.com/zendesk/zendesk_api_client_php/tree/v2.2.17"
-            },
-            "abandoned": true,
-            "time": "2023-07-11T04:06:41+00:00"
         }
     ],
     "packages-dev": [

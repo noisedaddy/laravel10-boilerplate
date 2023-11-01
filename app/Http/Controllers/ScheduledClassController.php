@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ClassCanceled;
 use App\Models\ClassType;
 use Illuminate\Http\Request;
 use App\Models\ScheduledClass;
@@ -13,7 +14,7 @@ class ScheduledClassController extends Controller
      */
     public function index()
     {
-        $scheduledClasses = auth()->user()->scheduledClasses()->where('date_time', '>', now())->oldest('date_time')->get();
+        $scheduledClasses = auth()->user()->scheduledClasses()->upcoming()->oldest('date_time')->get();
         return view('instructor.upcoming')->with('scheduledClasses', $scheduledClasses);
     }
 
@@ -64,8 +65,10 @@ class ScheduledClassController extends Controller
             abort(403);
         }
 
+        ClassCanceled::dispatch($schedule);
 
         $schedule->delete();
+        $schedule->members()->detach();
 
         return redirect()->route('schedule.index');
     }

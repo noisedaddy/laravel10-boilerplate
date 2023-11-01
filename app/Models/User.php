@@ -47,5 +47,11 @@ class User extends Authenticatable
         return $this->hasMany(ScheduledClass::class, "instructor_id");
     }
 
+    /*
+     * GEt all the bookings for a given member
+     */
+    public function bookings() {
+        return $this->belongsToMany(ScheduledClass::class, 'bookings');
+    }
 
 }

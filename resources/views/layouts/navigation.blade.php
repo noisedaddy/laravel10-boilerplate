@@ -21,11 +21,27 @@
                     <x-nav-link :href="route('schedule.create')" :active="request()->routeIs('dashboard')">
                         Schedule a Class
                     </x-nav-link>
-                </div>                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('schedule.index')" :active="request()->routeIs('dashboard')">
                        Upcoming clases
                     </x-nav-link>
                 </div>
+                @endcan
+
+                @can('book-class')
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('booking.create')" :active="request()->routeIs('booking.create')">
+                        Book a class
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('booking.index')" :active="request()->routeIs('booking.index')">
+                        Upcoming class
+                    </x-nav-link>
+                </div>
+
                 @endcan
             </div>
 

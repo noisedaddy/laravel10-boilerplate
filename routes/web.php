@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/phpinfo', function () {
+    $test = 'sdfsfsdfsdf';
     return phpinfo();
 });
 Route::get('/dashboard', DashboardController::class)->middleware(['auth'])->name('dashboard');
@@ -37,9 +38,18 @@ Route::resource('/instructor/schedule', \App\Http\Controllers\ScheduledClassCont
     ->only(['index', 'create', 'store', 'destroy'])
     ->middleware(['auth','role:instructor']);
 
-Route::get('/member/dashboard', function () {
-    return view('member.dashboard');
-})->middleware(['auth','role:member'])->name('member.dashboard');
+/* Member routes */
+Route::middleware(['auth','role:member'])->group(function() {
+    Route::get('/member/dashboard', function () {
+        return view('member.dashboard');
+    })->name('member.dashboard');
+    Route::get('/member/book', [\App\Http\Controllers\BookingController::class, 'create'])->name('booking.create');
+    Route::post('/member/bookings', [\App\Http\Controllers\BookingController::class, 'store'])->name('booking.store');
+    Route::get('/member/bookings', [\App\Http\Controllers\BookingController::class, 'index'])->name('booking.index');
+    Route::delete('/member/bookings/{id}', [\App\Http\Controllers\BookingController::class, 'destroy'])->name('booking.destroy');
+});
+
+
 
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
